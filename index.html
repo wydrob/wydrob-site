@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WYDROB</title>
+  <title>WYDROB | Official Shop</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
@@ -111,7 +111,18 @@
 
   <script>
     document.getElementById('scrollArrow').addEventListener('click', function () {
-      document.getElementById('comingSoon').scrollIntoView({ behavior: 'smooth' });
+      const logo = document.querySelector('.coming-soon'); 
+      const logoRect = logo.getBoundingClientRect(); 
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      const logoCenter = logoRect.top + scrollTop + (logoRect.height / 2);
+      const viewportCenter = window.innerHeight / 2;
+      const targetScroll = logoCenter - viewportCenter;
+
+      window.scrollTo({
+        top: targetScroll,
+        behavior: 'smooth'
+      });
     });
   </script>
 
