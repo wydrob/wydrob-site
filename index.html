@@ -65,6 +65,12 @@
       opacity: 0.8;
     }
 
+    .artist-logo {
+    max-width: 600px;
+    height: auto;
+    animation: fadeIn 1.5s ease-out;
+  }
+
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -86,7 +92,7 @@
 <body>
 
   <section class="landing">
-    <h1 class="artist-name">WYDROB</h1>
+    <img src="logo.svg" alt="WYDROB Logo" class="artist-logo">
     <div class="arrow" id="scrollArrow">&#x25BC;</div>
   </section>
 
@@ -99,6 +105,8 @@
       document.getElementById('comingSoon').scrollIntoView({ behavior: 'smooth' });
     });
   </script>
+  <img src="assets/images/logo.png" alt="WYDROB Logo" class="artist-logo">
+
 
 </body>
 </html>
